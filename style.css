@@ -57,4 +57,9 @@ select {
   border: 1px solid #555;
   background-color: #2c2c3c;
   color: #f0f0f0
-  
+}
+
+a:focus {
+  outline: 2px solid #00ffd0;
+  border-radius: 4px;
+}
