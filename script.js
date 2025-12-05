@@ -9,6 +9,7 @@ docuement.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      const category = form.category.value;
       status.textContent = "Thanks for submitting your Upload! (Feature Coming Soon)"
     });
   }
