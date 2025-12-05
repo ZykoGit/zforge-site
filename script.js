@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Welcome to Zforge - where the mods come alive!");
+  if (!localStorage.getItem("visited")) {
+    alert("Welcome to Zforge - where Minecraft really comes alive!");
+    localStorage.setItem("visited", "true");
+  }
 });
 
 docuement.addEventListener("DOMContentLoaded", () => {
