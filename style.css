@@ -20,6 +20,7 @@ nav a {
   margin: 0 1em;
   color: #00adc4;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
