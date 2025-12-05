@@ -1,6 +1,44 @@
-<form>
-  <label>Mod Name: <input type="text" /></label><br />
-  <label>Description: <textarea></textarea></label><br />
-  <label>Upload File: <input type="file" /></label><br />
-  <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+  <meta charset="UTF-8">
+  <title>Upload - ZForge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="sript.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>ZForge</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mods.html">Mods</a>
+      <a href="upload.html">Upload</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Upload Your File</h2>
+    <form id="modUploadForm">
+      <label>
+        Upload Name:
+        <input type="text" name="modname" required>
+      </label><br>
+      <label>
+        Description:
+        <textarea name="description" required></textarea>
+      </label><br>
+      <label>
+        Upload File:
+        <input type="file" name="modFile" required>
+      </label><br>
+      <button type="submit">Submit Mod</button>
+    </form>
+    <p id="uploadStatus"></p>
+  </main>
+
+  <footer>
+    <p>&copyl 2025 ZForge</p>
+  </footer
+</body>
+</html>
