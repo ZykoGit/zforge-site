@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-  alert("Welcome to my first site!");
+  console.log("Welcome to Zforge!");
 });
