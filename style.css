@@ -64,3 +64,13 @@ a:focus {
   outline: 2px solid #00ffd0;
   border-radius: 4px;
 }
+
+.category {
+  display: inline-block;
+  background: #00ffd0;
+  color: #1e1e2f;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
