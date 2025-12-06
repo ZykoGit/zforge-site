@@ -17,3 +17,28 @@ docuement.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+documeny.addEventListener("DOMContentLoaded", () => {
+  const modList = document.getElementByID("modList")
+
+  if (modList) {
+    fetch("mods.json")
+      .then(response => response.json())
+      .then(mods => {
+        mods.forEach(mod => {
+          const card = document.createElement("div");
+          card.className = "mod-card";
+          card.innerHTML = `
+            <h3>${mod.name}</h3>
+            <p>${mod.description}</p>
+            <span class="category">${mod.category}</span>
+          `;
+          modList.appendChild(card);
+        });
+      })
+      .catch(err => {
+        modList.textContent = "Failed to load mods.";
+        console.error(err);
+      });
+  }
+});
