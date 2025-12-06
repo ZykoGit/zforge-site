@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Raising Hook",
+    "description": "Grapple across terrain with style.",
+    "category": "mod"
+  },
+  { 
+    "name": "Schoolwork",
+    "description": "Adds homework mechanics to Minecraft",
+    "category": "mod"
+  },
+  { 
+    "name": "Crystal Shaders",
+    "description": "Beautiful lighting and reflections",
+    "category": "shader",
+  },
+  { 
+    "name": "Retro Textures",
+    "description": "Classic pixel look for Minecraft",
+    "category": "texture"
+  }
+]
