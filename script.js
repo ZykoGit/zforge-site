@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-docuement.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("modUploadForm");
   const status = document.getElementById("uploadStatus");
 
@@ -18,8 +18,8 @@ docuement.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-documeny.addEventListener("DOMContentLoaded", () => {
-  const modList = document.getElementByID("modList")
+document.addEventListener("DOMContentLoaded", () => {
+  const modList = document.getElementById("modList")
 
   if (modList) {
     fetch("mods.json")
