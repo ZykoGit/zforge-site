@@ -65,7 +65,7 @@ a:focus {
   border-radius: 4px;
 }
 
-modList {
+.modList {
   display: inline-block;
   background: #ffffff;
   color: #1e1e2f;
