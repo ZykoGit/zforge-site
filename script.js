@@ -1,26 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Welcome alert
   if (!localStorage.getItem("visited")) {
     alert("Welcome to Zforge - where Minecraft really comes alive!");
     localStorage.setItem("visited", "true");
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Upload form
   const form = document.getElementById("modUploadForm");
   const status = document.getElementById("uploadStatus");
-
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const category = form.category.value;
-      status.textContent = "Thanks for submitting your Upload! (Feature Coming Soon)"
+      status.textContent = `Thanks for submitting your ${category}! (Feature Coming Soon)`;
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const modList = document.getElementById("modList")
-
+  // Mods list
+  const modList = document.getElementById("modList");
   if (modList) {
     fetch("mods.json")
       .then(response => response.json())
