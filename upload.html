@@ -17,49 +17,40 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Upload Your File</h2>
-<form id="modUploadForm">
-  <label>
-    Mod Name:
-    <input type="text" name="name" required>
-  </label>
+<main>
+  <h2 style="text-align:center; color:#00ffd0;">Upload Your Mod</h2>
+  <form id="modUploadForm">
+    <label>
+      Mod Name:
+      <input type="text" name="name" required>
+    </label>
 
-  <label>
-    Description:
-    <textarea name="description" required></textarea>
-  </label>
+    <label>
+      Description:
+      <textarea name="description" required></textarea>
+    </label>
 
-  <label>
-    Category:
-    <select name="category">
-      <option value="mod">Mod</option>
-      <option value="shader">Shader</option>
-      <option value="texture">Texture</option>
-    </select>
-  </label>
+    <label>
+      Category:
+      <select name="category">
+        <option value="mod">Mod</option>
+        <option value="shader">Shader</option>
+        <option value="texture">Texture</option>
+      </select>
+    </label>
 
-  <!-- ✅ New thumbnail upload -->
-  <label>
-    Thumbnail:
-    <input type="file" name="thumbnail" accept="image/*">
-  </label>
+    <label>
+      Thumbnail:
+      <input type="file" name="thumbnail" accept="image/*">
+    </label>
 
-  <!-- ✅ New screenshots upload -->
-  <label>
-    Screenshots:
-    <input type="file" name="screenshots" accept="image/*" multiple>
-  </label>
+    <label>
+      Screenshots:
+      <input type="file" name="screenshots" accept="image/*" multiple>
+    </label>
 
-  <button type="submit">Upload</button>
-</form>
+    <button type="submit">Upload</button>
+  </form>
 
-<div id="uploadStatus"></div>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 ZForge. All rights reserved.</p>
-  </footer
-</body>
-</html>
+  <div id="uploadStatus"></div>
+</main>
