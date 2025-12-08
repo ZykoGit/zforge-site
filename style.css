@@ -140,3 +140,21 @@ form#modUploadForm button:hover {
   border-radius: 6px;
   margin: 0.5em;
 }
+
+html, body {
+  height: 100%;           /* full height */
+  margin: 0;              /* remove default margin */
+  display: flex;
+  flex-direction: column; /* stack header, main, footer vertically */
+}
+
+main {
+  flex: 1;                /* take up remaining space */
+}
+
+footer {
+  background-color: #2c2c3c;
+  color: #888;
+  text-align: center;
+  padding: 1em;
+}
