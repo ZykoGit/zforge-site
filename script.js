@@ -5,31 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("visited", "true");
   }
 
-  // Mods list
-  const modList = document.getElementById("modList");
-  if (modList) {
-    fetch("mods.json")
-      .then(response => response.json())
-      .then(mods => {
-        mods.forEach(mod => {
-          const card = document.createElement("div");
-          card.className = "mod-card";
-          card.innerHTML = `
-            <h3>${mod.name}</h3>
-            <p>${mod.description}</p>
-            <span class="category">${mod.category}</span>
-          `;
-          modList.appendChild(card);
-        });
-      })
-      .catch(err => {
-        modList.textContent = "Failed to load mods.";
-        console.error(err);
-      });
-  }
+  // Upload form
   const form = document.getElementById("modUploadForm");
   const status = document.getElementById("uploadStatus");
-
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -55,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     });
   }
+
+  // Mods list + search/filter
   const modList = document.getElementById("modList");
   const searchBox = document.getElementById("searchBox");
   const categoryFilter = document.getElementById("categoryFilter");
@@ -89,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterMods() {
-    const search = searchBox.value.toLowerCase();
-    const category = categoryFilter.value;
+    const search = searchBox ? searchBox.value.toLowerCase() : "";
+    const category = categoryFilter ? categoryFilter.value : "all";
 
     const filtered = allMods.filter(mod => {
       const matchesSearch =
