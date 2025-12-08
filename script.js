@@ -38,4 +38,32 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error(err);
       });
   }
+  const form = document.getElementById("modUploadForm");
+  const status = document.getElementById("uploadStatus");
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.name.value;
+      const description = form.description.value;
+      const category = form.category.value;
+      const thumbnail = form.thumbnail.files[0];
+      const screenshots = Array.from(form.screenshots.files);
+
+      status.innerHTML = `
+        <h3>Preview:</h3>
+        <div class="mod-card">
+          ${thumbnail ? `<img src="${URL.createObjectURL(thumbnail)}" class="thumb">` : ""}
+          <h4>${name}</h4>
+          <p>${description}</p>
+          <span class="category">${category}</span>
+          <div class="screenshots">
+            ${screenshots.map(file => `<img src="${URL.createObjectURL(file)}">`).join("")}
+          </div>
+        </div>
+        <p>Thanks for submitting your upload! (Feature Coming Soon)</p>
+      `;
+    });
+  }
 });
