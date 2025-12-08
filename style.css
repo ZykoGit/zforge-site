@@ -158,3 +158,24 @@ footer {
   text-align: center;
   padding: 1em;
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.filters input,
+.filters select {
+  padding: 0.75em;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #2c2c3c;
+  color: #f0f0f0;
+  font-size: 1em;
+}
+
+.filters input::placeholder {
+  color: #aaa;
+}
