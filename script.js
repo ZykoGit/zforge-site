@@ -55,4 +55,55 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     });
   }
+  const modList = document.getElementById("modList");
+  const searchBox = document.getElementById("searchBox");
+  const categoryFilter = document.getElementById("categoryFilter");
+
+  let allMods = [];
+
+  if (modList) {
+    fetch("mods.json")
+      .then(response => response.json())
+      .then(mods => {
+        allMods = mods;
+        renderMods(mods);
+      })
+      .catch(err => {
+        modList.textContent = "Failed to load mods.";
+        console.error(err);
+      });
+  }
+
+  function renderMods(mods) {
+    modList.innerHTML = "";
+    mods.forEach(mod => {
+      const card = document.createElement("div");
+      card.className = "mod-card";
+      card.innerHTML = `
+        <h3>${mod.name}</h3>
+        <p>${mod.description}</p>
+        <span class="category">${mod.category}</span>
+      `;
+      modList.appendChild(card);
+    });
+  }
+
+  function filterMods() {
+    const search = searchBox.value.toLowerCase();
+    const category = categoryFilter.value;
+
+    const filtered = allMods.filter(mod => {
+      const matchesSearch =
+        mod.name.toLowerCase().includes(search) ||
+        mod.description.toLowerCase().includes(search);
+      const matchesCategory =
+        category === "all" || mod.category === category;
+      return matchesSearch && matchesCategory;
+    });
+
+    renderMods(filtered);
+  }
+
+  if (searchBox) searchBox.addEventListener("input", filterMods);
+  if (categoryFilter) categoryFilter.addEventListener("change", filterMods);
 });
