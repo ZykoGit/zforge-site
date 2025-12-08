@@ -5,17 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("visited", "true");
   }
 
-  // Upload form
-  const form = document.getElementById("modUploadForm");
-  const status = document.getElementById("uploadStatus");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const category = form.category.value;
-      status.textContent = `Thanks for submitting your ${category}! (Feature Coming Soon)`;
-    });
-  }
-
   // Mods list
   const modList = document.getElementById("modList");
   if (modList) {
